@@ -3,7 +3,7 @@
 
 /*============================= CSS VARIABLES ==================================*/
 :root{
-    --header-height: 3rem;
+    --header-height: 4rem;
     /*=============== COLORS =================*/
     --hue-color: 250;
 
@@ -16,7 +16,7 @@
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
     --input-color: hsl(var(--hue-color), 70%, 96%);
     --body-color: hsl(var(--hue-color), 60%, 99%);
-    --container-color: #FFF;
+    --container-color: rgb(255, 201, 139);
 
     /*=============== FONT & TYPOGRAPHY =================*/
     --body-font: 'Ubuntu', sans-serif;
@@ -41,6 +41,7 @@
     --mb-2: 2rem;
     --mb-2-5: 2.5rem;
     --mb-3: 3rem;
+    --mb-6: 6rem;
 
     --z-tooltip: 10;
     --z-fixed: 100;
@@ -77,7 +78,7 @@ body.dark-theme{
 }
 
 .change-theme{
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     color: var(--title-color);
     margin-right: var(--mb-1);
     cursor: pointer;
@@ -178,6 +179,7 @@ img{
 .nav__toggle{
     color: var(--title-color);
     font-weight: var(--font-medium);
+    font-size: var(--mb-1-5);
 }
 
 .nav__logo:hover{
@@ -216,7 +218,7 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: var(--small-font-size);
+    font-size: var(--mb-1);
     color: var(--title-color);
     font-weight: var(--font-medium);
 }
@@ -269,6 +271,14 @@ img{
     color: var(--first-color);
 }
 
+.linkedin__icon{
+    font-size: 3.5rem;
+}
+
+.github__icon{
+    font-size: 3.5rem;
+}
+
 .home__social-icon:hover{
     color: var(--first-color-alt);
 }
@@ -301,6 +311,23 @@ img{
     margin-bottom: var(--mb-2);
 }
 
+/*============== DOWN ARROW =============*/
+.home__down-arrow{
+    margin-top: 4%;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+}
+
+.home__down-arrow:hover{
+    color: var(--first-color);
+}
+
+.d-arrow{
+    font-size: var(--mb-6);
+}
+
 /*================= BUTTONS =====================*/
 .button{
     display: inline-block;
@@ -328,7 +355,7 @@ img{
 
 /*============================= ABOUT ==================================*/
 .about__img{
-    width: 200px;
+    width: 300px;
     border-radius: .5rem;
     justify-self: center;
     align-self: center;
@@ -345,10 +372,6 @@ img{
 }
 
 /*============================= SKILLS ==================================*/
-.skills__container{
-    row-gap: 0;
-}
-
 .skills__header{
     display: flex;
     align-items: center;
@@ -476,11 +499,14 @@ img{
 }
 
 .contact__container{
-    row-gap: 3rem;
+    display: table;
+    row-gap: 0;
+    align-items: center;
 }
 
 .contact__information{
     display: flex;
+    vertical-align: middle;
     margin-bottom: var(--mb-2);
 }
 
@@ -503,7 +529,7 @@ img{
 /*============================= SCROLL UP ==================================*/
 .scrollup{
     position: fixed;
-    right: 1rem;
+    right: 3rem;
     bottom: -20%;
     background-color: var(--first-color);
     opacity: .8;
@@ -518,7 +544,7 @@ img{
 }
 
 .scrollup__icon{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: #FFF;
 }
 
@@ -619,6 +645,7 @@ img{
     }
     .change-theme{
         margin: 0;
+
     }
 
     .home__container{
@@ -631,12 +658,12 @@ img{
     .home__blob{
         width: 270px;
     }
-    
+
     .about__container{
         column-gap: 5rem;
     }
     .about__img{
-        width: 350px;
+        width: 550px;
     }
     .about__description{
         text-align: initial;
