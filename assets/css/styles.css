@@ -279,6 +279,10 @@ img{
     font-size: 3.5rem;
 }
 
+.cube__icon{
+    font-size: 3.5rem;
+}
+
 .home__social-icon:hover{
     color: var(--first-color-alt);
 }
